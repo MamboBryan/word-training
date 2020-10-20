@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/wordsFragment">
+
+    <fragment
+        android:id="@+id/wordsFragment"
+        android:name="com.mamboexample.roomwordexample.views.fragments.WordsFragment"
+        android:label="Words"
+        tools:layout="@layout/fragment_words">
+        <action
+            android:id="@+id/action_wordsFragment_to_addWordFragment"
+            app:destination="@id/addWordFragment" />
+        <action
+            android:id="@+id/action_wordsFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addWordFragment"
+        android:name="com.mamboexample.roomwordexample.views.fragments.AddWordFragment"
+        android:label="Add Word"
+        tools:layout="@layout/fragment_add_word" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.mamboexample.roomwordexample.views.fragments.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
